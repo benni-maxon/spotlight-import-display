@@ -8,3 +8,15 @@ export async function getMovies() {
     const response = await client.from('movies').select('*').order('id');
     return response.data;
 }
+export async function getApps() {
+    const response = await client.from('apps').select('*').order('id');
+    return response.data;
+}
+export async function getPeople() {
+    const response = await client.from('people').select('*').order('id');
+    return response.data;
+}
+export async function getPlants() {
+    const response = await client.from('plants').select('*').order('id');
+    return response.data;
+}
