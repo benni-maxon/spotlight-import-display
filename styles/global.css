@@ -1,35 +1,107 @@
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: rgb(254, 251, 245);
+    --background: rgb(215, 184, 131);
+    --header-background: rgba(126, 152, 81, 0.873);
     --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
         'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
 }
 
 body {
     font-family: var(--primary-font);
-    background: var(--background);
+    background-image: url(/assets/desert-bg.jpeg);
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
     display: grid;
     grid-template-rows: auto 1fr;
+}
+
+main {
+    padding-bottom: 20px;
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(215, 184, 131, 0.793);
 }
 
 header {
     position: sticky;
     top: 0;
-    padding: 15px;
-    height: 80px;
+    height: 95px;
 
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    text-align: center;
 
     background-color: var(--header-background);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-bottom: double 4px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-header .logo {
-    height: 100%;
+h1 {
+    font-family: fantasy, serif;
+    font-size: 2.6em;
+    margin: 15px 5px 0px 5px;
+    position: fixed;
 }
 
-main {
-    padding: 20px;
+a {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: black;
+    background-color: rgb(175, 71, 71);
+    border: inset 3px black;
+    border-radius: 10px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+h2 {
+    border: dotted 5px black;
+    border-radius: 15px;
+    padding: 10px;
+    width: 90%;
+    font-family: cursive;
+    font-size: 3em;
+    text-align: center;
+    background-color: rgb(156, 113, 67);
+}
+
+.movie-div,
+.app-div,
+.person-div,
+.plant-div {
+    border: inset 3px black;
+    width: 80%;
+    margin: 15px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(222, 167, 147, 0.57);
+    border-radius: 20px;
+}
+
+#movie-div-section,
+#app-div-section,
+#person-div-section,
+#plant-div-section {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+#movie-div-container,
+#app-div-container,
+#person-div-container,
+#plant-div-container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    border: double 5px black;
+    background-color: rgb(216, 171, 86);
 }
